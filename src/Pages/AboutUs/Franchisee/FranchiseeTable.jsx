@@ -16,7 +16,6 @@ function FranchiseeTable() {
   if(!response) {
     return <Loading/>
   }
-  console.log(response)
   const allDistricts = [
     ...new Set(response.map((franchisee) => franchisee.district)),
   ];
