@@ -4,6 +4,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import Banner from "../../Components/Banner";
 import { ContactBox } from "./ContactUs";
 import Accordion from "../../Components/Accordion";
+import useGetApi from "../../Hook/useGetApi";
+import Loading from "../../Components/Loading";
 const data = [
   {
     name: "Shri. Sunil John .K",
@@ -253,12 +255,12 @@ const ContactFactory = () => {
 
 // list factory contact details
 function FactoryContactTable() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const {response} = useGetApi("factories")
+  if(!response) {
+    return <Loading/>
+  }
 
-  // Filter factories based on location
-  const filteredFactories = factoriesData.filter((factory) =>
-    factory.location.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+
   return (
     <div>
       {/* Contact email table */}
@@ -275,7 +277,7 @@ function FactoryContactTable() {
           id="search"
           placeholder="Search by location"
           className="p-2 border rounded-md w-full outline-none"
-          onChange={(e) => setSearchTerm(e.target.value)}
+
         />
       </div>
       <div className="overflow-x-auto">
@@ -292,30 +294,41 @@ function FactoryContactTable() {
             </tr>
           </thead>
           <tbody>
-            {/* rows */}
-            {filteredFactories.map((value, index) => (
-              <tr
-                className={`${index % 2 == 0 ? "bg-red-300" : "bg-red-200"}`}
-                key={value.factoryNo}
-              >
-                <th className="border p-2">{index + 1}</th>
-                <td className="border p-2">
-                  <a
-                    href="https://www.google.com"
-                    className="flex gap-3 items-center"
-                    target="_blank"
-                  >
-                    {value.location}
-                    <FaExternalLinkAlt className="text-base" />
-                  </a>
-                </td>
-                <td>Name</td>
-                <td className="border p-2">{value.phoneNumber}</td>
-                <td className="border p-2">{value.email}</td>
-                <td className="border p-2">Open</td>
-              </tr>
-            ))}
-          </tbody>
+  {/* rows */}
+  {response.map((value, index) => (
+    <tr
+      className={`${index % 2 === 0 ? "bg-red-300" : "bg-red-200"}`}
+      key={value.factory_number}
+    >
+      <th className="border p-2">{index + 1}</th>
+      <td className="border p-2">
+        <a
+          href={value.google_map_url}
+          className="flex gap-3 items-center"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {value.location_name}
+          <FaExternalLinkAlt className="text-base" />
+        </a>
+      </td>
+      <td className="border p-2">{value.manager_name}</td>
+      <td className="border p-2">{value.contact_number}</td>
+      <td className="border p-2">{value.email}</td>
+      <td className="border p-2">
+  <a
+    href={value.image}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Open
+  </a>
+</td>
+
+    </tr>
+  ))}
+</tbody>
+
         </table>
       </div>
     </div>
