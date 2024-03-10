@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+  --cursor-color: #333;
+  /* ::-webkit-scrollbar {display:none;} */
+}
+
+html.dark-mode {
+  --cursor-color: #fff
+}
+/* body {
+    font-family: 'Work Sans', sans-serif;
+} */
+body {
+  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
+}
+.hero-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    transition: background-image 0.5s ease-in-out;
+  }
+  
+  .banner {
+    @apply h-48 bg-gradient-to-r from-[#ED213A] to-[#93291E] flex flex-col items-center justify-center;
+  }
+
+strong{
+  color: black;
+}

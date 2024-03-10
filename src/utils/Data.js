@@ -1,0 +1,161 @@
+const careerData = [
+    {
+      title: "ജീവനക്കാരുടെ സ്ഥലം മാറ്റത്തിനുള്ള ഓൺലൈൻ അപേക്ഷ",
+      link: "https://www.google.com",
+      date: "12/02/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of Marketing Officer dated 05.06.2023",
+      link: "https://www.google.com",
+      date: "23/01/24",
+      status: true,
+    },
+    {
+      title: "Application for the Post of Marketing Officer",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title: "Rank List for the Post Of Site Supervisor KSCDC",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title: "Rank List for the Post Of Food Technologist KSCDC",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of Site Supervisor dated 03.12.2022",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title:
+        "Application for the Post of Food Technologist",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of Food Technologist dated 16.11.2022",
+      link: "https://www.google.com",
+      date: "15/01/23",
+      status: false,
+    },
+    {
+      title: "Corrigendum - Post of Food Technologist dated 07.11.2022",
+      link: "https://www.google.com",
+      date: "15/01/23",
+      status: false,
+    },
+    {
+      title: "Corrigendum - Post of Food Technologist dated 27.10.2022",
+      link: "https://www.google.com",
+      date: "29/01/23",
+      status: false,
+    },
+    {
+      title: "വീട്ടിലേക്ക് വന്ന് ഒരുപാട് വസ്ത്രങ്ങൾ എടുക്കുന്നതിനുള്ള അപേക്ഷ",
+      link: "https://www.google.com",
+      date: "02/03/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of HR Manager dated 15.04.2023",
+      link: "https://www.google.com",
+      date: "10/02/24",
+      status: true,
+    },
+    {
+      title: "Application for the Post of HR Manager",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: true,
+    },
+    {
+      title: "Rank List for the Post Of Project Engineer",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: true,
+    },
+    {
+      title: "Rank List for the Post Of Data Analyst",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of Project Engineer dated 20.01.2023",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: true,
+    },
+    {
+      title: "Application for the Post of Data Analyst",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of Data Analyst dated 10.12.2022",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: false,
+    },
+    {
+      title: "Corrigendum - Post of Data Analyst dated 01.12.2022",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: false,
+    },
+    {
+      title: "Corrigendum - Post of Data Analyst dated 15.11.2022",
+      link: "https://www.google.com",
+      date: "05/02/24",
+      status: false,
+    },
+    {
+      title: "ജീവനക്കാരുടെ സ്ഥലം മാറ്റത്തിനുള്ള ഓൺലൈൻ അപേക്ഷ",
+      link: "https://www.google.com",
+      date: "12/02/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of Marketing Officer dated 05.06.2023",
+      link: "https://www.google.com",
+      date: "23/01/24",
+      status: true,
+    },
+    {
+      title: "Application for the Post of Marketing Officer",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title: "Rank List for the Post Of Site Supervisor KSCDC",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title: "Rank List for the Post Of Food Technologist KSCDC",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+    {
+      title: "Corrigendum - Post of Site Supervisor dated 03.12.2022",
+      link: "https://www.google.com",
+      date: "15/01/24",
+      status: true,
+    },
+  ];
+  
+  

@@ -1,0 +1,32 @@
+
+.zoom, .small{
+    overflow: hidden;
+    padding: 0;
+    float:left;
+    margin:10px;
+}
+.zoom img {
+    transition-duration: 2s;
+    margin: 0 auto;
+    display: block;
+}
+.zoom img:hover {
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    z-index: 0;
+}
+.small img{
+  transition-duration: 4s;
+    margin: 0 auto;
+    display: block;
+  transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+}
+.small img:hover {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    z-index: 0;
+}

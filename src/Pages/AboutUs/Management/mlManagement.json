@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name": "ശ്രീ. സുനിൽ ജോൺ . കെ",
+      "image": "/images/executives/sr-1.jpg",
+      "designation": "മെറ്റീരിയൽസ് മാനേജർ",
+      "contact": [
+        "8281114645(O)",
+        "0474-2742271(Exn-35)(O)",
+        "9495992008(M)",
+        "mm@cashewcorporation.com"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ശ്രീ. ഷാജി . വി",
+      "image": "/images/executives/sr-2.jpg",
+      "designation": "കൊമേഷ്യൽ മാനേജർ",
+      "contact": [
+        "0474-2742271(Exn-47)(O)",
+        "9847511950(M)",
+        "cm@cashewcorporation.com"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ശ്രീ. എസ്സ്. അജിത്",
+      "image": "/images/executives/sr-3.jpg",
+      "designation": "പേഴ്സണൽ മാനേജർ",
+      "contact": [
+        "8281114648 (O)",
+        "0474-2742271(Exn-48)(O)",
+        "9400449587(M)",
+        "pm@cashewcorporation.com"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "ശ്രീ. രാജ ശങ്കരപിള്ള",
+      "image": "/images/executives/sr-4.png",
+      "designation": "ഫിനാൻസ് മാനേജർ ആൻഡ് കമ്പനി സെക്രട്ടറി",
+      "contact": [
+        "8281114649(O)",
+        "0474-2742271(Exn-49)(O)",
+        "9840383950(M)",
+        "fm@cashewcorporation.com"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "ശ്രീ. എ. ഗോപകുമാർ",
+      "image": "/images/executives/sr-5.jpg",
+      "designation": "പ്രൊഡക്ഷൻ മാനേജർ",
+      "contact": [
+        "8281114637 (O)",
+        "0474-2742271(Exn-46)(O)",
+        "9947783524(M)",
+        "prm@cashewcorporation.com"
+      ]
+    }
+  ]
+  

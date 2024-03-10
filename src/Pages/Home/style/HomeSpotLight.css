@@ -1,0 +1,35 @@
+/* Define keyframes for the scrolling animation with smooth easing */
+@keyframes spotlight {
+  0% {
+    transform: translateY(0);
+  }
+  20% { /* Introduce an initial ease-in */
+    transform: translateY(5%); /* Optional: Add subtle movement for visual interest */
+  }
+  80% { /* Introduce a final ease-out */
+    transform: translateY(-95%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Apply the animation to the individual items with a higher frame rate */
+.spotlight {
+  animation: spotlight 5s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Smooth easing function */
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* Optional: Apply timing function directly */
+}
+
+/* Optional: Fine-tune easing for specific effects */
+.spotlight.fast {
+  animation: spotlight 5s cubic-bezier(0.3, 0, 0.1, 1); /* Faster, slightly less smooth */
+}
+.spotlight.slow {
+  animation: spotlight 10s cubic-bezier(0.5, 0, 0.3, 1); /* Slower, more pronounced ease */
+}
+
+/* Pause the animation when the parent is hovered */
+.w-full.paused .spotlight,
+.w-full:hover .spotlight {
+  animation-play-state: paused;
+}

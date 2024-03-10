@@ -1,0 +1,30 @@
+/* marquee.css */
+
+.product-marquee {
+  overflow: hidden;
+  /* position: ; */
+}
+
+.product-marquee ul {
+  display: flex;
+  animation: scroll 25s linear infinite;
+}
+
+.product-marquee:hover ul {
+  animation-play-state: paused;
+}
+
+
+.product-marquee li {
+  min-width: 170px;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
