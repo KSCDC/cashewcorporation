@@ -253,13 +253,18 @@ const ContactFactory = () => {
   );
 };
 
-// list factory contact details
 function FactoryContactTable() {
-  const {response} = useGetApi("factories")
-  if(!response) {
-    return <Loading/>
+  const { response } = useGetApi("factories");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  if (!response) {
+    return <Loading />;
   }
 
+  // Filter response data based on search query
+  const filteredResponse = response.filter((value) =>
+    value.location_name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div>
@@ -277,7 +282,8 @@ function FactoryContactTable() {
           id="search"
           placeholder="Search by location"
           className="p-2 border rounded-md w-full outline-none"
-
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
       <div className="overflow-x-auto">
@@ -294,41 +300,39 @@ function FactoryContactTable() {
             </tr>
           </thead>
           <tbody>
-  {/* rows */}
-  {response.map((value, index) => (
-    <tr
-      className={`${index % 2 === 0 ? "bg-red-300" : "bg-red-200"}`}
-      key={value.factory_number}
-    >
-      <th className="border p-2">{index + 1}</th>
-      <td className="border p-2">
-        <a
-          href={value.google_map_url}
-          className="flex gap-3 items-center"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {value.location_name}
-          <FaExternalLinkAlt className="text-base" />
-        </a>
-      </td>
-      <td className="border p-2">{value.manager_name}</td>
-      <td className="border p-2">{value.contact_number}</td>
-      <td className="border p-2">{value.email}</td>
-      <td className="border p-2">
-  <a
-    href={value.image}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Open
-  </a>
-</td>
-
-    </tr>
-  ))}
-</tbody>
-
+            {/* rows */}
+            {filteredResponse.map((value, index) => (
+              <tr
+                className={`${index % 2 === 0 ? "bg-red-300" : "bg-red-200"}`}
+                key={value.factory_number}
+              >
+                <th className="border p-2">{index + 1}</th>
+                <td className="border p-2">
+                  <a
+                    href={value.google_map_url}
+                    className="flex gap-3 items-center"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {value.location_name}
+                    <FaExternalLinkAlt className="text-base" />
+                  </a>
+                </td>
+                <td className="border p-2">{value.manager_name}</td>
+                <td className="border p-2">{value.contact_number}</td>
+                <td className="border p-2">{value.email}</td>
+                <td className="border p-2">
+                  <a
+                    href={value.image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
