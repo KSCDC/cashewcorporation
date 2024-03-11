@@ -24,7 +24,7 @@ function HeroCards() {
   }
 
   return (
-    <div className="p-2 h-72 grid grid-cols-1  gap-3  justify-evenly lg:grid-cols-3 place-items-center justify-items-center ">
+    <div className="p-2 h-72 grid grid-cols-1  gap-3  justify-evenly lg:flex place-items-center justify-items-center ">
       {response.title_cards.map((value) => (
         <Link to={value.link} key={value.id}>
           <div

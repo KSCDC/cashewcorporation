@@ -263,7 +263,7 @@ function ProductFooter() {
             <a
               href="https://www.igoraza.com/"
               target="_blank"
-              className="text-white underline"
+              className="text-red-500 underline"
             >
               {" "}
               IGORAZA
