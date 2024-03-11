@@ -104,7 +104,7 @@ const TenderTable = () => {
               <th>{language ? "Tender Title" : "ടെൻഡർ തലക്കെട്ട്"}</th>
               <th>{language ? "Published Date" : "പ്രസിദ്ധീകരിച്ച തീയതി"}</th>
               <th>{language ? "Expiry Date" : "കാലാവധി തീയതി"}</th>
-              <th>Action</th>
+              <th>{language ? "Tender Documents":"ടെൻഡർ ഡോക്യുമെന്റ്സ്"}</th>
             </tr>
           </thead>
           <tbody>
@@ -118,7 +118,7 @@ const TenderTable = () => {
                     className="btn bg-red-300 border-none"
                     onClick={() => handleOpenModal(value.files)}
                   >
-                    {language ? "Tender Documents" : "ടെൻഡർ ഡോക്യുമെന്റ്സ്"}
+                    Open Docs
                   </button>
                   {value.is_e_tender && (
                     <span className="text-red-500 font-bold ml-2">E-Tender</span>
