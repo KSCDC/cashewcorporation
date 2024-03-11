@@ -49,7 +49,7 @@ function Hero() {
         <Navbar />
       </div>
       <div
-        className="hero-background h-96 bg-center lg:h-screen bg-cover bg-no-repeat relative"
+        className="hero-background h-60 bg-center lg:h-screen bg-cover bg-no-repeat relative"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}
