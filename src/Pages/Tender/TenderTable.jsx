@@ -20,10 +20,12 @@ const TenderTable = () => {
   const filteredData = response.filter((item) => {
     if (filter === "all") return true;
     if (filter === "tenders") {
-      if (subFilter === "all") return true;
+      if (subFilter === "all") return item.category === "live" || item.category === "previous";
       if (subFilter === "live") return item.category === "live";
       if (subFilter === "previous") return item.category === "previous";
-      if (subFilter === "etender") return item.is_e_tender;
+    }
+    if (filter === "e-tenders" && item.is_e_tender) {
+      return true;
     }
     return false;
   });
@@ -61,13 +63,13 @@ const TenderTable = () => {
             className={`btn ${filter === "tenders" && "btn-active bg-red-500 text-white"}`}
             onClick={() => handleFilterChange("tenders")}
           >
-            {language ? "Tenders" : "ടെണ്ഡേഴ്സ്"}
+            {language ? "Tenders" : "ടെൻഡർകൾ"}
           </button>
           <button
-            className={`btn ${filter === "tenders" && subFilter === "etender" && "btn-active bg-red-500 text-white"}`}
-            onClick={() => handleSubFilterChange("etender")}
+            className={`btn ${filter === "e-tenders" && "btn-active bg-red-500 text-white"}`}
+            onClick={() => handleFilterChange("e-tenders")}
           >
-            {language ? "E-Tenders" : "ഇ-ടെൻഡർ"}
+            {language ? "E-Tenders" : "ഇ-ടെൻഡർകൾ"}
           </button>
         </div>
         {filter === "tenders" && (
@@ -83,13 +85,13 @@ const TenderTable = () => {
                 className={`btn ${subFilter === "live" && "btn-active bg-red-500 text-white"}`}
                 onClick={() => handleSubFilterChange("live")}
               >
-                {language ? "Live Tenders" : "ലൈവ് ടെന്‍ഡര്‍സ്"}
+                {language ? "Live Tenders" : "ലൈവ് ടെൻ്ഡര്‍സ്"}
               </button>
               <button
                 className={`btn ${subFilter === "previous" && "btn-active bg-red-500 text-white"}`}
                 onClick={() => handleSubFilterChange("previous")}
               >
-                {language ? "Previous Tenders" : "മുന്‍നിര ടെന്‍ഡര്‍സ്"}
+                {language ? "Previous Tenders" : "മുന്‍നിര ടെന്ഡര്‍സ്"}
               </button>
             </div>
           </div>
@@ -97,7 +99,7 @@ const TenderTable = () => {
         <table className="table">
           <thead>
             <tr>
-              <th>{language ? "Tender Title" : "ടെണ്ഡേഴ്സ് തലക്കെട്ട്"}</th>
+              <th>{language ? "Tender Title" : "ടെണ്ടർ തലക്കെട്ട്"}</th>
               <th>{language ? "Published Date" : "പ്രസിദ്ധീകരിച്ച തീയതി"}</th>
               <th>{language ? "Expiry Date" : "കാലാവധി തീയതി"}</th>
               <th>Action</th>
@@ -107,8 +109,9 @@ const TenderTable = () => {
             {filteredData.map((value, index) => (
               <tr key={index} className={`${index % 2 === 0 ? "bg-red-200" : "bg-red-100"}`}>
                 <td>{language ? value.title_en : value.title_ml}</td>
-                <td>{value.published_date}</td>
                 <td>{value.expiry_date}</td>
+                
+                <td>{value.published_date}</td>
                 <td>
                   <button
                     className="btn bg-red-300 border-none"
@@ -116,6 +119,9 @@ const TenderTable = () => {
                   >
                     Open Docs
                   </button>
+                  {value.is_e_tender && filter === "e-tenders" && (
+                    <span className="text-red-500 font-bold ml-2">E-Tender</span>
+                  )}
                 </td>
               </tr>
             ))}
