@@ -24,8 +24,10 @@ const TenderTable = () => {
       if (subFilter === "live") return item.category === "live";
       if (subFilter === "previous") return item.category === "previous";
     }
-    if (filter === "e-tenders" && item.is_e_tender) {
-      return true;
+    if (filter === "e-tenders") {
+      if (subFilter === "all") return item.is_e_tender;
+      if (subFilter === "live") return item.is_e_tender && item.category === "live";
+      if (subFilter === "previous") return item.is_e_tender && item.category === "previous";
     }
     return false;
   });
@@ -63,16 +65,16 @@ const TenderTable = () => {
             className={`btn ${filter === "tenders" && "btn-active bg-red-500 text-white"}`}
             onClick={() => handleFilterChange("tenders")}
           >
-            {language ? "Tenders" : "ടെൻഡർകൾ"}
+            {language ? "Tenders" : "ടെൻഡർ"}
           </button>
           <button
             className={`btn ${filter === "e-tenders" && "btn-active bg-red-500 text-white"}`}
             onClick={() => handleFilterChange("e-tenders")}
           >
-            {language ? "E-Tenders" : "ഇ-ടെൻഡർകൾ"}
+            {language ? "E-Tenders" : "ഇ-ടെൻഡർ"}
           </button>
         </div>
-        {filter === "tenders" && (
+        {(filter === "tenders" || filter === "e-tenders") && (
           <div className="flex items-center justify-center">
             <div className="flex items-center space-x-2">
               <button
@@ -85,13 +87,13 @@ const TenderTable = () => {
                 className={`btn ${subFilter === "live" && "btn-active bg-red-500 text-white"}`}
                 onClick={() => handleSubFilterChange("live")}
               >
-                {language ? "Live Tenders" : "ലൈവ് ടെൻ്ഡര്‍സ്"}
+                {language ? "Live" : "ലൈവ്"}
               </button>
               <button
                 className={`btn ${subFilter === "previous" && "btn-active bg-red-500 text-white"}`}
                 onClick={() => handleSubFilterChange("previous")}
               >
-                {language ? "Previous Tenders" : "മുന്‍നിര ടെന്ഡര്‍സ്"}
+                {language ? "Previous Tender" : "പ്രീവിയസ് ടെൻഡർ"}
               </button>
             </div>
           </div>
@@ -99,7 +101,7 @@ const TenderTable = () => {
         <table className="table">
           <thead>
             <tr>
-              <th>{language ? "Tender Title" : "ടെണ്ടർ തലക്കെട്ട്"}</th>
+              <th>{language ? "Tender Title" : "ടെൻഡർ തലക്കെട്ട്"}</th>
               <th>{language ? "Published Date" : "പ്രസിദ്ധീകരിച്ച തീയതി"}</th>
               <th>{language ? "Expiry Date" : "കാലാവധി തീയതി"}</th>
               <th>Action</th>
@@ -109,17 +111,16 @@ const TenderTable = () => {
             {filteredData.map((value, index) => (
               <tr key={index} className={`${index % 2 === 0 ? "bg-red-200" : "bg-red-100"}`}>
                 <td>{language ? value.title_en : value.title_ml}</td>
-                <td>{value.expiry_date}</td>
-                
                 <td>{value.published_date}</td>
+                <td>{value.expiry_date}</td>
                 <td>
                   <button
                     className="btn bg-red-300 border-none"
                     onClick={() => handleOpenModal(value.files)}
                   >
-                    Open Docs
+                    {language ? "Tender Documents" : "ടെൻഡർ ഡോക്യുമെന്റ്സ്"}
                   </button>
-                  {value.is_e_tender && filter === "e-tenders" && (
+                  {value.is_e_tender && (
                     <span className="text-red-500 font-bold ml-2">E-Tender</span>
                   )}
                 </td>
