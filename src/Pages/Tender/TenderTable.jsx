@@ -97,7 +97,8 @@ const TenderTable = () => {
         <table className="table">
           <thead>
             <tr>
-              <th>{language ? "Tender Title" : "ടെണ്ടേഴ്സ് തലക്കെട്ട്"}</th>
+              <th>{language ? "Tender Title" : "ടെണ്ഡേഴ്സ് തലക്കെട്ട്"}</th>
+              <th>{language ? "Published Date" : "പ്രസിദ്ധീകരിച്ച തീയതി"}</th>
               <th>{language ? "Expiry Date" : "കാലാവധി തീയതി"}</th>
               <th>Action</th>
             </tr>
@@ -106,6 +107,7 @@ const TenderTable = () => {
             {filteredData.map((value, index) => (
               <tr key={index} className={`${index % 2 === 0 ? "bg-red-200" : "bg-red-100"}`}>
                 <td>{language ? value.title_en : value.title_ml}</td>
+                <td>{value.published_date}</td>
                 <td>{value.expiry_date}</td>
                 <td>
                   <button
