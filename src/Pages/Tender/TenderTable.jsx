@@ -87,7 +87,7 @@ const TenderTable = () => {
                 className={`btn ${subFilter === "live" && "btn-active bg-red-500 text-white"}`}
                 onClick={() => handleSubFilterChange("live")}
               >
-                {language ? "Live" : "ലൈവ്"}
+                {language ? "Live Tenders" : "ലൈവ് ടെൻഡർ"}
               </button>
               <button
                 className={`btn ${subFilter === "previous" && "btn-active bg-red-500 text-white"}`}
