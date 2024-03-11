@@ -141,7 +141,7 @@ const ValueAddition = () => {
           <tr>
             <th className="border p-2">Factory.No</th>
             <th className="border p-2">Location</th>
-            <th className="border p-2">Name.of.Factory Manager</th>
+            <th className="border p-2">Manager - VAU</th>
             <th className="border p-2">Contact Number</th>
             <th className="border p-2">Email</th>
             <th className="border p-2">Image</th>
@@ -184,7 +184,7 @@ const CashewPlantation = () => {
           <tr>
             <th className="border p-2">Factory.No</th>
             <th className="border p-2">Location</th>
-            <th className="border p-2">Name.of.Factory Manager</th>
+            <th className="border p-2">Manager - VAU</th>
             <th className="border p-2">Contact Number</th>
             <th className="border p-2">Email</th>
             <th className="border p-2">Image</th>
@@ -293,7 +293,7 @@ function FactoryContactTable() {
             <tr>
               <th className="border p-2">Factory.No</th>
               <th className="border p-2">Location</th>
-              <th className="border p-2">Name.of.Factory Manager</th>
+              <th className="border p-2">Manager - VAU</th>
               <th className="border p-2">Contact Number</th>
               <th className="border p-2">Email</th>
               <th className="border p-2">Image</th>
