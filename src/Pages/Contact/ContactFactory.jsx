@@ -240,6 +240,8 @@ const accordion = [
 ];
 
 const ContactFactory = () => {
+
+
   return (
     <div>
       <Banner image={"office.jpg"} />
