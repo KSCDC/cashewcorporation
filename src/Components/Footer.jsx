@@ -6,8 +6,8 @@ import {
   LuGitlab,
   LuInstagram,
   LuLinkedin,
-  LuTwitter,
 } from "react-icons/lu";
+import { FaXTwitter } from "react-icons/fa6";
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import { useEffect } from "react";
@@ -98,12 +98,10 @@ function FooterLinks({ title, values }) {
 function FooterSocialMediaPannel() {
   const { language } = useLanguage();
   const socialMedis = [
-    { icon: <LuFacebook />, link: "1" },
-    { icon: <LuGitlab />, link: "2" },
-    { icon: <LuGithub />, link: "3" },
-    { icon: <LuTwitter />, link: "4" },
-    { icon: <LuInstagram />, link: "5" },
-    { icon: <LuLinkedin />, link: "6" },
+    { icon: <LuFacebook className="text-blue-600" />, link: "1" },
+    { icon: <FaXTwitter className="text-black"/>, link: "2" },
+    { icon: <LuInstagram className="text-pink-600" />, link: "3" },
+    { icon: <LuLinkedin className="text-indigo-600" />, link: "4" },
   ];
   return (
     <div className="flex items-center justify-center ">
