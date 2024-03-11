@@ -19,13 +19,11 @@ const TenderTable = () => {
 
   const filteredData = response.filter((item) => {
     if (filter === "all") return true;
-    if (filter === "live") {
-      if (subFilter === "all") return item.category === "live";
-      if (subFilter === "Tenders") return item.category === "live" && !item.is_e_tender;
-      if (subFilter === "E-Tenders") return item.category === "live" && item.is_e_tender;
-    }
-    if (filter === "previous") {
-      return item.category === "previous" && item.expiry_date;
+    if (filter === "tenders") {
+      if (subFilter === "all") return true;
+      if (subFilter === "live") return item.category === "live";
+      if (subFilter === "previous") return item.category === "previous";
+      if (subFilter === "etender") return item.is_e_tender;
     }
     return false;
   });
@@ -52,10 +50,54 @@ const TenderTable = () => {
   return (
     <div>
       <div className="overflow-x-auto">
+        <div className="flex items-center justify-center space-x-4 mb-4">
+          <button
+            className={`btn ${filter === "all" && "btn-active bg-red-500 text-white"}`}
+            onClick={() => handleFilterChange("all")}
+          >
+            {language ? "All" : "എല്ലാം"}
+          </button>
+          <button
+            className={`btn ${filter === "tenders" && "btn-active bg-red-500 text-white"}`}
+            onClick={() => handleFilterChange("tenders")}
+          >
+            {language ? "All Tenders" : "എല്ലാം ടെണ്ഡേഴ്സ്"}
+          </button>
+          <button
+            className={`btn ${filter === "tenders" && subFilter === "etender" && "btn-active bg-red-500 text-white"}`}
+            onClick={() => handleSubFilterChange("etender")}
+          >
+            {language ? "E-Tenders" : "ഇ-ടെൻഡർ"}
+          </button>
+        </div>
+        {filter === "tenders" && (
+          <div className="flex items-center justify-center">
+            <div className="flex items-center space-x-2">
+              <button
+                className={`btn ${subFilter === "all" && "btn-active bg-red-500 text-white"}`}
+                onClick={() => handleSubFilterChange("all")}
+              >
+                {language ? "All" : "എല്ലാം"}
+              </button>
+              <button
+                className={`btn ${subFilter === "live" && "btn-active bg-red-500 text-white"}`}
+                onClick={() => handleSubFilterChange("live")}
+              >
+                {language ? "Live Tenders" : "ലൈവ് ടെന്‍ഡര്‍സ്"}
+              </button>
+              <button
+                className={`btn ${subFilter === "previous" && "btn-active bg-red-500 text-white"}`}
+                onClick={() => handleSubFilterChange("previous")}
+              >
+                {language ? "Previous Tenders" : "മുന്‍നിര ടെന്‍ഡര്‍സ്"}
+              </button>
+            </div>
+          </div>
+        )}
         <table className="table">
           <thead>
             <tr>
-              <th>{language ? "Tender Title" : "ടെണ്ടർ തലക്കെട്ട്"}</th>
+              <th>{language ? "Tender Title" : "ടെണ്ടേഴ്സ് തലക്കെട്ട്"}</th>
               <th>{language ? "Expiry Date" : "കാലാവധി തീയതി"}</th>
               <th>Action</th>
             </tr>
