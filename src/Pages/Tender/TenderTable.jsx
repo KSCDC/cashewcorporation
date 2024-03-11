@@ -103,7 +103,7 @@ const TenderTable = () => {
             <tr>
               <th>{language ? "Tender Title" : "ടെൻഡർ തലക്കെട്ട്"}</th>
               <th>{language ? "Published Date" : "പ്രസിദ്ധീകരിച്ച തീയതി"}</th>
-              <th>{language ? "Expiry Date" : "കാലാവധി തീയതി"}</th>
+              <th>{language ? "Last Date" : "അവസാന തീയതി"}</th>
               <th>{language ? "Tender Documents":"ടെൻഡർ ഡോക്യുമെന്റ്സ്"}</th>
             </tr>
           </thead>
