@@ -141,7 +141,7 @@ const ValueAddition = () => {
           <tr>
             <th className="border p-2">Factory.No</th>
             <th className="border p-2">Location</th>
-            <th className="border p-2">Assist. Factory Manager</th>
+            <th className="border p-2">Manager - VAU</th>
             <th className="border p-2">Contact Number</th>
             <th className="border p-2">Email</th>
             <th className="border p-2">Image</th>
@@ -159,8 +159,8 @@ const ValueAddition = () => {
               <FaExternalLinkAlt className="text-base" />
             </a>
           </td>
-          <td className="border p-2"> Name</td>
-          <td className="border p-2">0474-2729023</td>
+          <td className="border p-2">Smt. Sujatha N (In charge)</td>
+          <td className="border p-2">9495473136</td>
           <td className="border p-2">
             <a href="mailto:f6@cashewcorportion.com">f6@cashewcorportion.com</a>
           </td>
@@ -184,7 +184,7 @@ const CashewPlantation = () => {
           <tr>
             <th className="border p-2">Factory.No</th>
             <th className="border p-2">Location</th>
-            <th className="border p-2">Manager - VAU</th>
+            <th className="border p-2">Manager - Plantation</th>
             <th className="border p-2">Contact Number</th>
             <th className="border p-2">Email</th>
             <th className="border p-2">Image</th>
@@ -202,8 +202,8 @@ const CashewPlantation = () => {
               <FaExternalLinkAlt className="text-base" />
             </a>
           </td>
-          <td className="border p-2"> Name</td>
-          <td className="border p-2">0474-2530033</td>
+          <td className="border p-2">Shri. Rajeeve  (in charge) </td>
+          <td className="border p-2">9544745661</td>
           <td className="border p-2">
             <a href="mailto:f6@cashewcorportion.com">f1@cashewcorportion.com</a>
           </td>
@@ -293,7 +293,7 @@ function FactoryContactTable() {
             <tr>
               <th className="border p-2">Factory.No</th>
               <th className="border p-2">Location</th>
-              <th className="border p-2">Manager - Plantation</th>
+              <th className="border p-2">Assist. Factory Manager</th>
               <th className="border p-2">Contact Number</th>
               <th className="border p-2">Email</th>
               <th className="border p-2">Image</th>
