@@ -33,9 +33,9 @@ const data = [
   },
   {
     name: "Shri. Raja Sankara Pillai",
-    designation: "Finance Manager and Company Secretary",
+    designation: "Finance Manager  & and Company Secretary",
     landlineOrCellNo: "8281114649",
-    email: ["fm@cashewcorporation.com", "cs@cashewcorporation.com"],
+    email: ["fm@cashewcorporation.com &", "cs@cashewcorporation.com"],
   },
   {
     name: "Shri. A. Gopakumar",
@@ -117,7 +117,6 @@ const HeadOfficeTable = () => (
                       email
                     ) : (
                       <>
-                        <br />
                         {email}
                       </>
                     )}

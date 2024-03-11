@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import image from "/images/map.svg";
 
 function DefaultContact() {
+  useEffect(() => {window.scrollTo(0,0)},[])
   return (
     <div className="p-3">
       <div className="grid gap-3 lg:flex w-full ">
