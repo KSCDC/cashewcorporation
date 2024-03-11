@@ -61,7 +61,7 @@ const TenderTable = () => {
             className={`btn ${filter === "tenders" && "btn-active bg-red-500 text-white"}`}
             onClick={() => handleFilterChange("tenders")}
           >
-            {language ? "All Tenders" : "എല്ലാം ടെണ്ഡേഴ്സ്"}
+            {language ? "Tenders" : "ടെണ്ഡേഴ്സ്"}
           </button>
           <button
             className={`btn ${filter === "tenders" && subFilter === "etender" && "btn-active bg-red-500 text-white"}`}
