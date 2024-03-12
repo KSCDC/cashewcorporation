@@ -50,9 +50,9 @@ function Career() {
      <div className="p-5">
      <span className="flex items-center p-3">
         <span className="h-3 w-3 rounded-full bg-green-500"></span>
-        {language ? "Active" : "സജീവം"} &nbsp;
+        {language ? "Active" : "നിലവിലുള്ളത്"} &nbsp;
         <span className="h-3 w-3 rounded-full bg-red-500"></span>
-        {language ? "Expired" : "കാലഹരണം"}
+        {language ? "Expired" : "കാലാവധി കഴിഞ്ഞത്"}
       </span>
       <div className="overflow-x-auto min-h-screen ">
         <table className="table">
@@ -61,7 +61,7 @@ function Career() {
             <tr>
               <th></th>
               <th>{language ? "Job Title" : "ജോലിയുടെ പേര്‌"}</th>
-              <th>{language ? "Expire Date" : "കാലാവധികഴിയുന്ന ദിനം"}</th>
+              <th>{language ? "Expire Date" : "അവസാന തീയതി"}</th>
             </tr>
           </thead>
           <tbody>
