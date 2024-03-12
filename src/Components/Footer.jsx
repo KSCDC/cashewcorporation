@@ -224,7 +224,7 @@ function Footer() {
             <div className="flex flex-col items-center ">
               <img
                 src="/images/footer5.png"
-                className="h-[75px] w-[75px] rounded-lg object-contain "
+                className="h-[72px]  rounded-lg object-contain "
                 alt="Footer image"
               />
               <p className="text-xs font-bold -mt-2 lg:-mt-1">{language ? "On Time Delivery" : "കൃത്യസമയത്ത് ഡെലിവറി"}</p>
