@@ -6,7 +6,7 @@
 
 .marquee ul {
   display: flex;
-  animation: scroll 28s linear infinite;
+  animation: scroll 32s linear infinite;
 }
 
 .marquee:hover ul {
