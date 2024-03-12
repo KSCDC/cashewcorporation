@@ -11,7 +11,7 @@ const Card = ({ link }) => {
   const hostname = new URL(link).hostname;
 
   return (
-    <div className="cursor-pointer group bg-white  shadow-lg flex items-center justify-center p-4 mb-4 rounded-md transition-transform duration-300 transform hover:scale-105 ">
+    <div className="cursor-pointer group bg-white  shadow-lg flex items-center justify-center p-1 mb-4 rounded-md transition-transform duration-300 transform hover:scale-105 ">
       <a
         href={link}
         className="font-bold text-center flex items-center gap-3 text-red-500 bg-gradient-to-r from-red-500 to-black bg-clip-text "
