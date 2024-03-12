@@ -61,7 +61,8 @@ function Career() {
             <tr>
               <th></th>
               <th>{language ? "Job Title" : "ജോലിയുടെ പേര്‌"}</th>
-              <th>{language ? "Expire Date" : "അവസാന തീയതി"}</th>
+              <th>{language ? "Published Date" : "പ്രസിദ്ധീകരിച്ച തീയതി"}</th>
+              <th>{language ? "Last Date" : "അവസാന തീയതി"}</th>
             </tr>
           </thead>
           <tbody>
@@ -82,6 +83,7 @@ function Career() {
                     <span className="bg-red-500 h-3 w-3 rounded-full font-bold"></span>
                   )}
                 </td>
+                <td>{value.published_date}</td>
                 <td>{value.expiry_date}</td>
               </tr>
             ))}
