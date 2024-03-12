@@ -46,7 +46,7 @@ function Career() {
         <TranslateButton />
       </button>
       <Banner image="career.jpg" />
-      <h2 className="p-3 text-2xl font-bold">{language ? "Career" : "കരിയർ"}</h2>
+      <h2 className="p-3 text-2xl font-bold">{language ? "Careers" : "കരിയർ"}</h2>
      <div className="p-5">
      <span className="flex items-center p-3">
         <span className="h-3 w-3 rounded-full bg-green-500"></span>
