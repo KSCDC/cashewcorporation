@@ -19,15 +19,15 @@ const TenderTable = () => {
 
   const filteredData = response.filter((item) => {
     if (filter === "all") return true;
-    if (filter === "tenders") {
-      if (subFilter === "all") return item.category === "live" || item.category === "previous";
-      if (subFilter === "live") return item.category === "live";
-      if (subFilter === "previous") return item.category === "previous";
+    if (filter === "live") {
+      if (subFilter === "all") return item.category === "live";
+      if (subFilter === "tenders") return item.category === "live" && !item.is_e_tender;
+      if (subFilter === "e-tenders") return item.category === "live" && item.is_e_tender;
     }
-    if (filter === "e-tenders") {
-      if (subFilter === "all") return item.is_e_tender;
-      if (subFilter === "live") return item.is_e_tender && item.category === "live";
-      if (subFilter === "previous") return item.is_e_tender && item.category === "previous";
+    if (filter === "previous") {
+      if (subFilter === "all") return item.category === "previous";
+      if (subFilter === "tenders") return item.category === "previous" && !item.is_e_tender;
+      if (subFilter === "e-tenders") return item.category === "previous" && item.is_e_tender;
     }
     return false;
   });
@@ -56,25 +56,19 @@ const TenderTable = () => {
       <div className="overflow-x-auto">
         <div className="flex items-center justify-center space-x-4 mb-4">
           <button
-            className={`btn ${filter === "all" && "btn-active bg-red-500 text-white"}`}
-            onClick={() => handleFilterChange("all")}
+            className={`btn ${filter === "live" && "btn-active bg-red-500 text-white"}`}
+            onClick={() => handleFilterChange("live")}
           >
-            {language ? "All" : "എല്ലാം"}
+            {language ? "Live Tenders" : "ലൈവ് ടെൻഡർ"}
           </button>
           <button
-            className={`btn ${filter === "tenders" && "btn-active bg-red-500 text-white"}`}
-            onClick={() => handleFilterChange("tenders")}
+            className={`btn ${filter === "previous" && "btn-active bg-red-500 text-white"}`}
+            onClick={() => handleFilterChange("previous")}
           >
-            {language ? "Tenders" : "ടെൻഡർ"}
-          </button>
-          <button
-            className={`btn ${filter === "e-tenders" && "btn-active bg-red-500 text-white"}`}
-            onClick={() => handleFilterChange("e-tenders")}
-          >
-            {language ? "E-Tenders" : "ഇ-ടെൻഡർ"}
+            {language ? "Previous Tenders" : "പ്രീവിയസ് ടെൻഡർ"}
           </button>
         </div>
-        {(filter === "tenders" || filter === "e-tenders") && (
+        {(filter === "live" || filter === "previous") && (
           <div className="flex items-center justify-center">
             <div className="flex items-center space-x-2">
               <button
@@ -84,16 +78,16 @@ const TenderTable = () => {
                 {language ? "All" : "എല്ലാം"}
               </button>
               <button
-                className={`btn ${subFilter === "live" && "btn-active bg-red-500 text-white"}`}
-                onClick={() => handleSubFilterChange("live")}
+                className={`btn ${subFilter === "tenders" && "btn-active bg-red-500 text-white"}`}
+                onClick={() => handleSubFilterChange("tenders")}
               >
-                {language ? "Live Tenders" : "ലൈവ് ടെൻഡർ"}
+                {language ? "Tenders" : "ടെൻഡർ"}
               </button>
               <button
-                className={`btn ${subFilter === "previous" && "btn-active bg-red-500 text-white"}`}
-                onClick={() => handleSubFilterChange("previous")}
+                className={`btn ${subFilter === "e-tenders" && "btn-active bg-red-500 text-white"}`}
+                onClick={() => handleSubFilterChange("e-tenders")}
               >
-                {language ? "Previous Tender" : "പ്രീവിയസ് ടെൻഡർ"}
+                {language ? "E-Tenders" : "ഇ-ടെൻഡർ"}
               </button>
             </div>
           </div>
@@ -120,9 +114,6 @@ const TenderTable = () => {
                   >
                     Open Docs
                   </button>
-                  {value.is_e_tender && (
-                    <span className="text-red-500 font-bold ml-2">E-Tender</span>
-                  )}
                 </td>
               </tr>
             ))}
