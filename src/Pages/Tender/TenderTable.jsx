@@ -50,7 +50,7 @@ const TenderTable = () => {
     setSelectedFiles([]);
     setModalOpen(false);
   };
-
+  const reversedData = filteredData.slice().reverse();
   return (
     <div>
       <div className="overflow-x-auto">
@@ -102,22 +102,25 @@ const TenderTable = () => {
             </tr>
           </thead>
           <tbody>
-            {filteredData.map((value, index) => (
-              <tr key={index} className={`${index % 2 === 0 ? "bg-red-200" : "bg-red-100"}`}>
-                <td>{language ? value.title_en : value.title_ml}</td>
-                <td>{value.published_date}</td>
-                <td>{value.expiry_date}</td>
-                <td>
-                  <button
-                    className="btn bg-red-300 border-none"
-                    onClick={() => handleOpenModal(value.files)}
-                  >
-                    Open Docs
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
+  {reversedData.map((value, index) => (
+    <tr key={index} className={`${index % 2 === 0 ? "bg-red-200" : "bg-red-100"}`}>
+      <td>{language ? value.title_en : value.title_ml}</td>
+      <td>{value.published_date}</td>
+      <td>{value.expiry_date}</td>
+      <td>
+        <button
+          className="btn bg-red-300 border-none"
+          onClick={() => handleOpenModal(value.files)}
+        >
+          Open Docs
+        </button>
+        {value.is_e_tender && (
+          <span className="text-red-500 font-bold ml-2">E-Tender</span>
+        )}
+      </td>
+    </tr>
+  ))}
+</tbody>
         </table>
       </div>
       {modalOpen && (
