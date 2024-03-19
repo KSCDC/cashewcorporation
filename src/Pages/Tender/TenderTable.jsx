@@ -17,6 +17,15 @@ const TenderTable = () => {
     return <Loading />;
   }
 
+  // Helper function to format date to dd/mm/yyyy
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
   const filteredData = response.filter((item) => {
     if (filter === "all") return true;
     if (filter === "live") {
@@ -50,7 +59,9 @@ const TenderTable = () => {
     setSelectedFiles([]);
     setModalOpen(false);
   };
+
   const reversedData = filteredData.slice().reverse();
+  
   return (
     <div>
       <div className="overflow-x-auto">
@@ -68,6 +79,7 @@ const TenderTable = () => {
             {language ? "Previous Tenders" : "പ്രീവിയസ് ടെൻഡർ"}
           </button>
         </div>
+        <hr className="border border-b border-red-300 mb-2"/>
         {(filter === "live" || filter === "previous") && (
           <div className="flex items-center justify-center">
             <div className="flex items-center space-x-2">
@@ -102,25 +114,22 @@ const TenderTable = () => {
             </tr>
           </thead>
           <tbody>
-  {reversedData.map((value, index) => (
-    <tr key={index} className={`${index % 2 === 0 ? "bg-red-200" : "bg-red-100"}`}>
-      <td>{language ? value.title_en : value.title_ml}</td>
-      <td>{value.published_date}</td>
-      <td>{value.expiry_date}</td>
-      <td>
-        <button
-          className="btn bg-red-300 border-none"
-          onClick={() => handleOpenModal(value.files)}
-        >
-          Open Docs
-        </button>
-        {value.is_e_tender && (
-          <span className="text-red-500 font-bold ml-2">E-Tender</span>
-        )}
-      </td>
-    </tr>
-  ))}
-</tbody>
+            {reversedData.map((value, index) => (
+              <tr key={index} className={`${index % 2 === 0 ? "bg-red-200" : "bg-red-100"}`}>
+                <td>{language ? value.title_en : value.title_ml}</td>
+                <td>{formatDate(value.published_date)}</td>
+                <td>{formatDate(value.expiry_date)}</td>
+                <td>
+                  <button
+                    className="btn bg-red-300 border-none"
+                    onClick={() => handleOpenModal(value.files)}
+                  >
+                    Open Docs
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
       {modalOpen && (
