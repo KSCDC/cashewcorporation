@@ -67,7 +67,7 @@ function HomeSpotLight() {
         ))}
         {/* box closes */}
       </div>
-      <div className="mt-5">
+      <div className="mt-5 w-full">
         {/* latest news */}
         <h2 data-aos="fade-left" className="bg-red-500 text-white w-44 p-2 text-xl font-bold rounded-tr-2xl">Latest News</h2>
         {/* main table */}
