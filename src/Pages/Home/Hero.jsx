@@ -49,7 +49,7 @@ function Hero() {
         <Navbar />
       </div>
       <div
-        className="hero-background h-44 bg-center lg:h-screen lg:bg-contain bg-contain w-full bg-no-repeat relative"
+        className="hero-background  h-44 bg-center lg:h-screen lg:bg-contain bg-contain w-full bg-no-repeat relative"
         style={{
           backgroundImage: `url(${images[imageIndex]})`,
         }}
@@ -59,7 +59,7 @@ function Hero() {
           <Navbar />
         </div>
 
-        <div className="relative top-3/4 flex justify-between p-3">
+        <div className="relative top-2/4 lg:top-3/4 flex justify-between p-3">
           <button
             onClick={downImage}
             className="text-2xl p-3 text-white/100 rounded-full shadow-lg"
