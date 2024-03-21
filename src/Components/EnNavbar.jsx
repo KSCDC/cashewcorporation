@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CiMenuBurger} from "react-icons/ci";
+import { CiMenuBurgee} from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 import { FaShoppingCart,FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
@@ -213,7 +213,7 @@ function EnNavbar() {
           className="text-xl focus:outline-none"
           aria-label="Toggle Menu"
         >
-          <CiMenuBurger className="text-black m-3 text-2xl" />
+          <CiMenuBurgee className="text-black m-3 text-2xl" />
         </button>
       </div>
       {/* shop Now Button */}
