@@ -16,19 +16,18 @@ function Videos() {
   };
 
   return (
-    <div>
-      <div className="grid grid-cols-1 gap-2 lg:grid-cols-2 p-3">
+    <div className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
         {response.map((video, index) => {
           const videoId = extractVideoId(video.name);
           const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}` : null;
 
           return (
-            <div key={index}>
+            <div key={index} className="relative overflow-hidden rounded-lg shadow-md">
               {embedUrl && (
                 <iframe
                   key={index} // Ensure each iframe has a unique key
-                  width="560"
-                  height="315"
+                  className="w-full h-full lg:h-96"
                   src={embedUrl}
                   title="YouTube video player"
                   frameBorder="0"

@@ -39,7 +39,7 @@ function Kscdc() {
           <h2 className="text-2xl font-semibold mb-4">
             {language ? " About KSCDC" : "കാഷ്യൂ കോർപ്പറേഷനെക്കുറിച്ച്"}
           </h2>
-          <p className="text-gray-700 leading-7 text-justify">
+          <p className={`text-gray-700 leading-7 text-justify`}>
             {language ? response.about_us[0].description_en : response.about_us[0].description_ml}
           </p>
         </section>

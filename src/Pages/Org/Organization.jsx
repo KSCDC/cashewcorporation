@@ -326,7 +326,7 @@ fat. The antioxidants in the cashews, beta carotene and vitamin E, help the
 body fight against diseases.`}
         />
       </div>
-      <div className="flex p-5 gap-20 justify-center ">
+      <div className="lg:flex p-5 gap-20 justify-center ">
         <div>
           <h3 className="font-bold text-xl">
             Value added products from cashew Kernels in 15 exciting forms

@@ -45,7 +45,7 @@ function Management() {
           <div className="bg-red-400 h-44 w-full"></div>
           <div
             className=" rounded-lg p-2 absolute -top-32"
-            // data-aos="fade-up"
+            data-aos="fade-up"
           >
             {managingDirector.map((value, index) => (
               <div
@@ -67,7 +67,7 @@ function Management() {
           </div>
         </div>
         {/* md special section close */}
-        <div className="p-8  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-12">
+        <div className="p-8  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-12 place-content-center justify-items-center">
           {withOutManagingDirector.map((management) => (
             <ManagementProfileCard 
             key={management.id} 

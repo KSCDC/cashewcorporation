@@ -55,7 +55,7 @@ function Gallery() {
       </button>       
       <div className=" min-h-screen">
         <Banner image="gallery.jpg"/>
-        <div className="grid grid-cols-3  gap-3 lg:flex items-center justify-center space-x-3 mt-4 mb-4 p-3">
+        <div className="grid grid-cols-3 justify-items-center  gap-3 lg:flex items-center justify-center space-x-3 mt-4 mb-4 p-4 lg:p-3">
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'all' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('all')}>All</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'functions' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('functions')}>Functions</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'video' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('video')}>Videos</button>

@@ -35,10 +35,6 @@ const Product = () => {
                 src={`/images/home/${index + 1}.png`}
                 alt={`${index + 1}.png`}
               />
-              <Link to="/product" className="text-sm px-5 py-1.5 bg-red-500 text-white font-bold flex items-center gap-2 ">
-                Buy Now
-                <FaShoppingCart/>
-              </Link>
             </div>
           </li>
         ))}

@@ -55,13 +55,14 @@ function About() {
               {/* Company  Image with background */}
               <ImageBackground image={response.about_us[0].image} />
 
+{/* mission and vision */}
               <div>
                 <div className="grid lg:flex justify-center items-center gap-8">
                   {/* Mission Card */}
               
                     <div
                     data-aos="fade-right"
-                    className="p-6 h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
+                    className="p-6 min-h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
                   >
                     <h2 className="text-3xl font-bold mb-4">{language ? "Mission" : "ദൗത്യം"}</h2>
                     <p className={`text-gray-700 leading-relaxed ${language ? "text-justify": null}`}>
@@ -71,7 +72,7 @@ function About() {
 
                   <div
                     data-aos="fade-left"
-                    className="p-6 h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
+                    className="p-6 min-h-72 bg-white w-full lg:max-w-md flex flex-col items-start rounded-lg shadow-md border-l-4 border-red-500 transform transition ease-in-out duration-300 hover:scale-105 hover:-translate-y-3"
                   >
                      <h2 className="text-3xl font-bold mb-4">{language ? "Vision" : "കാഴ്ചപ്പാട്"}</h2>
                     <p className={`text-gray-700 leading-relaxed ${language ? "text-justify": null}`}>

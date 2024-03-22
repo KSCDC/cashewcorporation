@@ -179,7 +179,7 @@ function Footer() {
             KSCDC
           </h2>:
           <h2
-          // data-aos="fade-right"
+          data-aos="fade-right"
           
           className="text-center text-3xl font-bold mb-4"
         >
