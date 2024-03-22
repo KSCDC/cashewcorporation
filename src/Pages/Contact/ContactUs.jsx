@@ -68,10 +68,10 @@ export default ContactUs;
 
 export const ContactBox = () => {
   return(
-    <div className="container mx-auto w-full lg:w-1/2">
+    <div className="container mx-auto w-96 lg:w-1/2">
     <div
       className="bg-[#0757A9] text-white p-12 rounded-lg shadow-lg "
-      data-aos="fade-up"
+      // data-aos="fade-up"
       data-aos-duration="800"
     >
       <h1 className="text-3xl font-bold mb-6">Contact Details</h1>

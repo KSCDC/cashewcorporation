@@ -14,10 +14,6 @@ const itemsPerPage = 10;
 function Career() {
   const [currentPage, setCurrentPage] = useState(1);
   const {response} = useGetApi("career")
-  if(!response || response.length === 0) {
-    return <Loading/>
-  }
-
   const handlePrevPage = () => {
     setCurrentPage((prev) => Math.max(prev - 1, 1));
   };
@@ -39,6 +35,31 @@ function Career() {
 
 
 
+  // Check if response is empty or null
+  if (!response || response.length === 0) {
+    return (
+      <div className="min-h-screen">
+        <Navbar />
+        <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
+          <TranslateButton />
+        </button>
+        <Banner image="career.jpg" />
+        <h2 className="p-3 text-2xl font-bold">{language ? "Careers" : "കരിയർ"}</h2>
+        <div className="p-5">
+          <span className="flex items-center p-3">
+            <span className="h-3 w-3 rounded-full bg-green-500"></span>
+            {language ? "Active" : "നിലവിലുള്ളത്"} &nbsp;
+            <span className="h-3 w-3 rounded-full bg-red-500"></span>
+            {language ? "Expired" : "കാലാവധി കഴിഞ്ഞത്"}
+          </span>
+          <p className="text-center text-gray-600">{language ? "Nothing in here currently" : "നിലവിലെത്തുന്നത് ഒന്നുമില്ല"}</p>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  
   return (
     <div className="min-h-screen">
       <Navbar />

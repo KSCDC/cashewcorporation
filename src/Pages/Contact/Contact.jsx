@@ -47,9 +47,9 @@ function Contact() {
         </div>
        </div>
        {/* contact Sections */}
-       <div className="">
+
        {section()}
-       </div>
+ 
        <Footer/>
     </main>
   );
