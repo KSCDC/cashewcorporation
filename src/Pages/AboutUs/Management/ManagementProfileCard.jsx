@@ -9,7 +9,7 @@ function ManagementProfileCard({id, name, image, designation, phone_number_one,p
       <img src={`${image}`} className="group-hover:hidden h-52 w-48 rounded-full" alt="manager_image_profile" />
       <div className="p-4 flex flex-col items-center lg:items-start">
         <h1 className="text-xl font-bold text-red-500 group-hover:text-white">{name}</h1>
-        <h3 className="text-sm text-gray-600">HOD ({designation})</h3>
+        <h3 className="text-sm text-gray-600 text-center">HOD ({designation})</h3>
         <ul className="mt-3 flex flex-col items-center lg:items-start">
     
             <li className="text-gray-700">{phone_number_one}</li>
