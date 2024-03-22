@@ -31,7 +31,7 @@ function Home() {
 
         <Hero />
         <div className="p-2 mt-3">
-        <div className="h-screen lg:h-80">
+        <div className="h-screen lg:h-80 p-3">
         <HeroCards />
         </div>
         <div className="mt-80 lg:mt-0 md:mt-0">

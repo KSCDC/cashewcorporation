@@ -14,19 +14,20 @@ function Client() {
             <h2 className="font-bold text-3xl ">
             Let’s try our service now!
             </h2>
-            <p className="lg:max-w-xl">{
+            <p className="lg:max-w-xl text-center">{
             
             language ?"KSCDC is committed to help out clients 24×7. Feel free to reach out to us for any queries and help" : "24×7 ഉപഭോക്താക്കളെ സഹായിക്കാൻ KSCDC പ്രതിജ്ഞാബദ്ധമാണ്. ഏത് അന്വേഷണത്തിനും സഹായത്തിനും ഞങ്ങളെ ബന്ധപ്പെടാൻ മടിക്കരുത്"}</p>
             </div>
-            <div className="flex items-center relative">
-              <a href="https://wa.me/+917736886026?text=Hello%20there!" target="_blank" className="absolute right-0">
-              <button className="px-8 py-2 border border-white rounded font-bold   bg-red-500 hover:bg-red-600 text-white">
+            <div className="items-center justify-center relative">
+              <a href="https://wa.me/+917736886026?text=Hello%20there!" target="_blank" className="absolute flex right-1/3 lg:right-0">
+              <button className="btn px-8 py-2 border border-white rounded font-bold   bg-red-500 hover:bg-red-600 text-white">
                 Contact Now
               </button>
               </a>
             </div>
           </div>
         </div>
+        
         {/* background image */}
         <img
           src="/images/hero-1.jpg"
