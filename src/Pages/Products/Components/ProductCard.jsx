@@ -34,7 +34,7 @@ function ProductCard({
   return (
     <div
       // onClick={handleUserClick}
-      className="w-full  shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer"
+      className="w-full  shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer group"
     >
       {/* Product Image */}
       <a className="block w-full h-48 overflow-hidden">
@@ -48,7 +48,7 @@ function ProductCard({
         {/* Actual product image */}
         <img
         
-          className={`object-contain w-full h-48 ${isImageLoaded ? "" : "hidden"}`}
+          className={`object-contain w-full h-48 group-hover:scale-150 transition duration-300 ease-in-out ${isImageLoaded ? "" : "hidden"}`}
           src={image}
           alt="product"
           onLoad={handleImageLoad}
