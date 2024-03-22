@@ -43,9 +43,11 @@ const RTI = () => {
         <Banner image="rit.jpg" />
       </div>
 
-      <div className="p-2">
+      <div className="p-1">
         {data.map((value, index) => (
-          <Accordion key={index} title={value.title} content={value.content} />
+          <Accordion key={index} 
+          title={value.title} 
+          content={value.content} />
         ))}
       </div>
       <Footer/>

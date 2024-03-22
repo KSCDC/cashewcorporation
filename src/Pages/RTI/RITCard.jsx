@@ -23,7 +23,7 @@ const information = [
     <main>
         {information.map((value) => (
             <div  className="flex group mt-2">
-            <div className="w-96 hidden lg:flex bg-white group-hover:bg-indigo-500 group-hover:rounded-xl group-hover:text-white transition duration-300 transform group-hover:scale-105 p-6">
+            <div className="w-80 hidden lg:flex bg-white group-hover:bg-indigo-500 group-hover:rounded-xl group-hover:text-white transition duration-300 transform group-hover:scale-105 p-6">
               <h3 className="font-bold text-xl">{value.title}</h3>
             </div>
             <div className="w-96 bg-gray-200 p-6 flex flex-col items-start">
