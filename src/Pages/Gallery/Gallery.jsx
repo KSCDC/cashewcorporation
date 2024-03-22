@@ -10,6 +10,7 @@ import TranslateButton from '../../Components/TranslateButton';
 import { useLanguage } from '../../contexts/LanguageContext';
 import Footer from '../../Components/Footer';
 import ProductFooter from "../Products/Components/ProductFooter"
+import Loading from '../../Components/Loading';
 
 function Gallery() {
   const [filter, setFilter] = useState('all');
@@ -63,9 +64,12 @@ function Gallery() {
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'awards' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('awards')}>Awards</button>
           <button className={`px-5 py-1 border hover:bg-red-500 hover:text-white ${filter === 'downloads' && 'bg-red-500 text-white'}`} onClick={() => handleFilterChange('downloads')}>Downloads</button>
         </div>
-        <div className="flex flex-col items-center">
-          {renderImages()}
+        <div className="min-h-screen">
+          <Loading/>
         </div>
+        {/* <div className="flex flex-col items-center">
+          {renderImages()}
+        </div> */}
       </div>
       <ProductFooter/>
     </div>

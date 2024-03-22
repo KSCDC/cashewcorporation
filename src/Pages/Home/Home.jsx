@@ -42,7 +42,7 @@ function Home() {
         <DirectorBoard/>
         <Product/>
         <Practise/> {/*blog and news in home page*/}
-        <Gallery/>
+        {/* <Gallery/> */}
         <PlayStore/>
         <Client/>
         <GetInTocuh/>
