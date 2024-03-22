@@ -39,7 +39,7 @@ const RTI = () => {
       <button onClick={toggleLanguage} className="fixed bottom-4 right-3 z-50">
         <TranslateButton />
       </button>
-      <div className="flex-grow p-6 bg-gray-100">
+      <div className="flex-grow bg-gray-100">
         <Banner image="rit.jpg" />
       </div>
 
