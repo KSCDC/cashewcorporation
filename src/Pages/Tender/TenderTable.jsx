@@ -27,7 +27,7 @@ const TenderTable = () => {
   };
 
   const filteredData = response.filter((item) => {
-    if (filter === "all") return true;
+    if (filter === "all") return item.category === "live";
     if (filter === "live") {
       if (subFilter === "all") return item.category === "live";
       if (subFilter === "tenders") return item.category === "live" && !item.is_e_tender;
