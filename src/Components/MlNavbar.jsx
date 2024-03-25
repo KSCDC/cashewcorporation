@@ -219,15 +219,16 @@ function MlNavbar() {
       {/* shop Now Button */}
       <div className="ml-5 hidden lg:flex flex-col items-center">
         <div className="relative">
-          <Link
-            to="/product"
+          <a
+            href="https://cashewcart.com/"
+            target="_blank"
             className=" rounded flex items-center justify-center  top-0 right-2 relative"
           >
             <button className="flex text-[11px] items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
             Show Now
               <FaShoppingCart className="" />
             </button>
-          </Link>
+          </a>
           <div className="">
             <img
               src="/images/CDC.png"
@@ -281,7 +282,7 @@ function MlNavbar() {
                   </div>
                     <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 text-base rounded-box w-52 ">
                       <li><Link to="/product" className="hover:bg-red-500 hover:text-white">CDC Brand  ഉൽപ്പന്നങ്ങൾ</Link></li>
-                      <li><Link to="/kscdc" className="bg-red-500 hover:bg-red-600 text-white mt-2">Online Shopping</Link></li>
+                      <li><a  href="https://cashewcart.com/" target="_blank" className="bg-red-500 hover:bg-red-600 text-white mt-2">Online Shopping</a></li>
                     </ul>
                   </div>
                 

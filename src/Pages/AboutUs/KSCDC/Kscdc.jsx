@@ -47,6 +47,7 @@ function Kscdc() {
           <img
             src={`${BACKEND_DOMAIN}/${response.about_us[0].image}`}
             alt="Company Image"
+            className="w-full h-full"
           />
         </div>
         <div className="mt-4 flex flex-col items-start justify-center ">

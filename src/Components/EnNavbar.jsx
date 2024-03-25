@@ -27,12 +27,13 @@ function EnNavbar() {
       >
         CDC Brand Products
       </Link>
-      <Link
+      <a
         className="bg-red-600 text-white rounded-lg hover:bg-red-400 border-red-500 btn"
-        to="/product"
+        href="https://cashewcart.com/"
+        target="_blank"
       >
         Online Shopping
-      </Link>
+      </a>
     </div>
   );
 
@@ -219,15 +220,16 @@ function EnNavbar() {
       {/* shop Now Button */}
       <div className="ml-5 hidden lg:flex flex-col items-center">
         <div className="relative">
-          <Link
-            to="/product"
+          <a
+            href="https://cashewcart.com/"
+            target="_blank"
             className=" rounded flex items-center justify-center  top-0 right-2 relative"
           >
             <button className="flex text-sm items-center gap-2 font-bold bg-red-500 hover:bg-red-400 p-2 rounded-lg text-white">
               Shop Now
               <FaShoppingCart />
             </button>
-          </Link>
+          </a>
           <div className="">
             <img
               src="/images/CDC.png"
