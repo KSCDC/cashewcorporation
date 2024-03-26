@@ -19,6 +19,9 @@ const FunctionImage = () => {
   }
   const {language} = useLanguage()
   const functionImages = response.filter((data) => data.category === "functions")
+  if (functionImages.length === 0) {
+    return <div>No data found</div>;
+  }
   return (
     <div className="grid grid-cols-1 gap-4 lg:grid-cols-5 p-3">
       {functionImages.map((item) => (

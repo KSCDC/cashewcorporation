@@ -9,8 +9,12 @@ function AwardImages() {
   if(!response) {
     return <Loading/>
   }
-  
+ 
+
   const awardData = response.filter((data) => data.category === "awards")
+  if (awardData.length === 0) {
+    return <div>No data found</div>;
+  }
   return (
     <div className="grid gap-4 grid-cols-1 lg:grid-cols-4 p-3 ">
       {awardData.map((award) => (

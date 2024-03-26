@@ -9,6 +9,9 @@ function AchievementsImages() {
     return <Loading/>
   }
   const finalImages = response.filter((data) => data.category === "achievements")
+  if (finalImages.length === 0) {
+    return <div>No data found</div>;
+  }
   return (
     <div className='p-3'>
         <div className="grid grid-cols-1 gap-3 place-content-center justify-items-center lg:grid-cols-3">
