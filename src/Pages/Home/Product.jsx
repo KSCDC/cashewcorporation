@@ -20,21 +20,39 @@ const Product = () => {
   }, []);
 
   const data = useLanguageData(enHomeProduct, mlHomeProduct);
-
+  const productNames = [
+      "Plain Cashews",
+      "Roasted Cashews",
+      "Red Chilly Coated Cashews",
+      "Chilly-Garlic Coated Cashews",
+      "Salt & Pepper Coated Cashews",
+      "Cashew Vita Chocolate",
+      "Cashew Vita Cardamom",
+      "Cashew Vita Vanilla",
+      "Cashew Vita Pistachio",
+      "Cashew-Vanilla Milkshake Powder",
+      "Cashew Powder",
+      "Cashew Vita",
+      "Cashew Soup",
+      "Cashew Apple Syrup",
+      "Cashew Apple Pine Jam",
+      "Cashew Apple Aerated Soda"
+    ]
   return (
     <div className="product-marquee w-full">
       <h2 className="text-2xl font-bold m-4 text-center text-red-500">
         {data[0].title}
       </h2>
-      <ul className="product-marquee-content" style={{ "--marquee-elements-total": marqueeElementsTotal }}>
+      <ul className="product-marquee-content group" style={{ "--marquee-elements-total": marqueeElementsTotal }}>
         {Array.from({ length: 16 }).map((_, index) => (
-          <li key={index} style={{ width: `${marqueeElementWidth}%` }}>
+          <li key={index} className="border " style={{ width: `${marqueeElementWidth}%` }}>
             <div className="bg-white shadow-lg h-80 w-full flex flex-col items-center justify-center">
               <img
-                className="h-32 object-contain w-full"
+                className="h-32 object-contain w-full group-hover:scale-110  transition ease-in-out duration-300"
                 src={`/images/home/${index + 1}.png`}
                 alt={`${index + 1}.png`}
               />
+              <p className="max-w-xs font-bold text-red-600 text-center text-xs lg:text-sm">{productNames[index]}</p>
             </div>
           </li>
         ))}
