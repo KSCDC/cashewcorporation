@@ -57,13 +57,15 @@ function ProductDetailsBox(props) {
                     {!isOnline ? (
                         <Link to="/franchisee/#franchisee">
                             <button className="btn w-full mt-3 bg-red-500 text-white hover:bg-red-400">
-                                Find Offline Store Location For Purchasing
+                                Find Offline Store Location
                             </button>
                         </Link>
                     ) : (
-                        <button className="btn w-full mt-3 bg-red-500 text-white hover:bg-red-400">
-                            Purchase Now
+                        <a href="https://www.cashewcart.com/" target='_blank'>
+                            <button className="btn w-full mt-3 bg-red-500 text-white hover:bg-red-400">
+                            Visit cashewcart.com
                         </button>
+                        </a>
                     )}
                 </div>
             </div>

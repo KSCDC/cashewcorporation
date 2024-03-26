@@ -6,7 +6,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/s.png",
     type: "plain",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Plain W180 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -38,7 +38,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/s.png",
     type: "plain",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Plain W210 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -65,7 +65,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/s.png",
     type: "plain",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Plain W240 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -127,7 +127,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/w450.png",
     type: "plain",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Plain W450 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -157,7 +157,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/s.png",
     type: "plain",
     grade: "popular", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Plain Splits(S) Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -187,7 +187,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/lwp.png",
     type: "plain",
     grade: "popular", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Plain Large White Pieces (LWP) Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure`,
     packet_weights: [
@@ -316,7 +316,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/W180.png",
     type: "roastedandsalted",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Roasted and Salted W180 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -347,7 +347,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/w320.png",
     type: "roastedandsalted",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Roasted and Salted W240 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure`,
     packet_weights: [
@@ -377,7 +377,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/w320.png",
     type: "roastedandsalted",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Roasted and Salted W320 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure`,
     packet_weights: [
@@ -407,7 +407,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/w320.png",
     type: "roastedandsalted",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description:`Roasted and Salted W450 Premium Grade cashews are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets and Franchisees.`,
     packet_weights: [
@@ -459,7 +459,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/cashe-vita-vanilla.png",
     type: "valueAddedProducts",
     grade: "cashew-vita", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: "Cashew Vita: Vanilla Flavoured Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure",
     packet_weights: [
@@ -483,7 +483,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/cashew-vita-cardamom.jpg",
     type: "valueAddedProducts",
     grade: "cashew-vita", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description : "Cashew Vita: Cardamom Flavoured Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.",
     packet_weights: [
@@ -503,7 +503,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/chocolate.jpg",
     type: "valueAddedProducts",
     grade: "cashew-vita", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Cashew Vita: Chocolate Flavoured Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -528,7 +528,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/pista.jpg",
     type: "valueAddedProducts",
     grade: "cashew-vita", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Cashew Vita: Pistachio Flavoured Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure`,
     packet_weights: [
@@ -551,7 +551,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/GOM02546.png",
     type: "valueAddedProducts",
     grade: "flavoured-cashew", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Chilly Garlic Coated  (Flavoured cashew) Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -574,7 +574,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/GOM02472.png",
     type: "valueAddedProducts",
     grade: "flavoured-cashew", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Red Chilly Coated Cashew Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -597,7 +597,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/GOM02533.png",
     type: "valueAddedProducts",
     grade: "flavoured-cashew", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Salt and Pepper Coated  (Flavoured cashew) Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure`,
     packet_weights: [
@@ -620,7 +620,7 @@ export const productData = [
     second_image: "/images/products/secondaryImage/GOM02572.png",
     type: "valueAddedProducts",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Cashew Powder Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -645,7 +645,7 @@ curries, payasams ice-creams etc.`
     second_image: "/images/products/secondaryImage/GOM02563.png",
     type: "valueAddedProducts",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Cashew Vita: Vanilla Flavoured Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -669,7 +669,7 @@ curries, payasams ice-creams etc.`
     second_image: "/images/products/secondaryImage/GOM02589.png",
     type: "valueAddedProducts",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Cashew Vita Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
@@ -693,7 +693,7 @@ curries, payasams ice-creams etc.`
     second_image: "/images/products/secondaryImage/GOM02648.png",
     type: "valueAddedProducts",
     grade: "premium", 
-    isOnline: false,
+    isOnline: true,
     rating: 4,
     description: `Cashew Soup Mix Premium Value Added  cashew products are now available in various weights and grams. All rates are GST inclusive. Product are now available at the Factory Outlets, Franchisees and Online store. Through the online store products are only available in India. Shipping and other Charges paid extra when buying through the online store :  Kerala 8% ,South India 13%, Other States 18% will be added with the price for completing the ordering procedure.`,
     packet_weights: [
