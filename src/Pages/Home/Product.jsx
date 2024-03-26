@@ -35,8 +35,8 @@ const Product = () => {
       "Cashew Vita",
       "Cashew Soup",
       "Cashew Apple Syrup",
+      "Cashew Apple Aerated Soda",
       "Cashew Apple Pine Jam",
-      "Cashew Apple Aerated Soda"
     ]
   return (
     <div className="product-marquee w-full">
